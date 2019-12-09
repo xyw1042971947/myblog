@@ -1,0 +1,12 @@
+{% load static %}
+
+<script src="{% static 'comment/js/activate-power.js' %}?v=20180120"></script>
+{% for each in articles%}
+<p> {{ each.title }}  </p>
+<p> {{ each.get_absolute_url }}  </p>
+<p>==============</p>
+{% endfor %}
+<div class="card-body p-2 p-md-3">
+        <textarea class="form-control rounded-0" id="comment-form" name="text"
+                  placeholder="评论请使用 markdown 语法" rows="5" required></textarea>
+    </div>

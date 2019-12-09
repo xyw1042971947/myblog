@@ -1,0 +1,490 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="referrer" content="origin">
+    <!-- TDK and ICO -->
+    <title>关于网站，网站及博主介绍_TendCode</title>
+    
+<meta name="description"
+      content="本网站是一个采用django+bootstrap4搭建的个人博客，本着学习和分享的精神，博客项目开源，源代码可以到我的Github中查看，网站建站历程可以查看页面Timeline内容。">
+<meta name="keywords" content="网站About页面,关于网站,关于博主,关于站长">
+
+    <link rel="shortcut icon" href="/static/blog/img/favicon.ico" type="image/x-icon"/>
+    <!-- Bootstrap and font-awesome CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../static/js/headroom.min.js"></script>
+    <!-- blog CSS -->
+    <link href="../static/css/base.css" rel="stylesheet">
+    
+    <!--根据cookies判断是否启用暗色主题-->
+    
+</head>
+<body>
+<!--导航开始-->
+
+<nav class="navbar navbar-expand-md bg-white fixed-top blog-navbar py-md-0">
+    <a class="navbar-brand d-md-none d-lg-block" id="site-logo-name" href="/">
+        <strong class="px-2">TendCode</strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-2">
+                
+                <a class="nav-link py-md-3 " href="/"><i class="fa fa-home mr-1"></i>首页<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-2">
+                
+                <a class="nav-link py-md-3 " href="/archive/"><i class="fa fa-sitemap mr-1"></i>归档</a>
+            </li>
+            
+            <li class="nav-item mr-2">
+                
+                <a class="nav-link py-md-3 " href="/tool/"><i class="fa fa-balance-scale mr-1"></i>在线工具</a>
+            </li>
+            
+            
+            <li class="nav-item mr-2 d-none d-lg-block">
+                <a class="nav-link py-md-3" href="https://hao.tendcode.com" target="_blank"><i class="fa fa-chrome mr-1"></i>微草导航</a>
+            </li>
+            
+            
+            <li class="nav-item mr-2 ">
+                
+                <a class="nav-link py-md-3 active" href="/about/"><i class="fa fa-anchor mr-1"></i>关于</a>
+            </li>
+            <form class="nav-item navbar-form mr-2 py-md-2" role="search" method="get" id="searchform" action="/search/">
+                <div class="input-group">
+                    <input type="search" name="q" class="form-control rounded-0" placeholder="站内搜索" autocomplete="off" required=True>
+                    <div class="input-group-btn">
+                        <button class="btn btn-info rounded-0" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </div><!-- /input-group -->
+            </form>
+        </ul>
+        <ul class="navbar-nav">
+            
+            <li class="nav-item mr-2">
+                <a class="nav-link py-md-3" href="/accounts/login/?next=/about/">登录</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-md-3" href="/accounts/signup/?next=/about/">注册</a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+<!--导航结束-->
+
+<!--消息块-->
+
+
+<!--回到顶部按钮-->
+<div class="text-center" id="to-top">
+    <i class="fa fa-chevron-up" id="btn-top" title="回到顶部"></i>
+</div>
+
+<!--主要内容块-->
+<main>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8" style="line-height:2">
+            <div class="card rounded-0 border-0 p-3 f-16"><h2><strong>关于网站</strong></h2>
+<hr />
+<p><a href="https://www.python.org/downloads/release/python-369/"><img alt="Python" src="../static/picture/python-3.6.9-green.svg" /></a>
+<a href="https://docs.djangoproject.com/zh-hans/2.2/"><img alt="Django" src="../static/picture/django-2.2.6-blue.svg" /></a>
+<a href="https://v4.bootcss.com/"><img alt="Bootstrap4" src="../static/picture/bootstrap4-4.3.1-red.svg" /></a></p>
+<ul>
+<li>Simple is better than complex.</li>
+<li>本网站是一个个人博客网站，主要分享博主的编程学习心得</li>
+<li>网站主要使用 django + mysql + redis + nginx 搭建，部署方式为容器化部署，使用的是 docker 镜像加上 docker-compose 编排，同时在测试环境使用 Jenkins 实现 CI/CD 自动化构建和部署</li>
+<li>网站用到的很多技术其实并非必须，但是我做这个网站的目的是为了把所学的东西都运用起来，所以会尽可能使用更多的技术去扩展网站的功能</li>
+<li>请各位使用了我博客源码作为你自己的博客网站支持的同学在自己博客上线后给一个注明，指向我的 Github 博客项目的地址或者博客地址，谢谢！   </li>
+</ul>
+<h2><strong>关于博主</strong></h2>
+<hr />
+<ul>
+<li>人生苦短，我用 Python！Docker！Jenkins！</li>
+<li>博主是2015年末自学 Python 开启的编程之路，在第一次接触到 Python 的时候就爱上了这门编程语言，所以主攻 Python，顺带学习其他编程语言。</li>
+<li>目前从事的工作主要偏向于 DevOps 和自动化开发，主要负责的是服务的 CI/CD 的工作，工作主要使用的技术栈是 Shell 和 Python，其实入职的时候是测试职位，做过一段时间的自动化测试工作，后来接手了两个自动化项目之后就转为了自动化开发</li>
+<li>Python 技能树：Django/Flask 的 web 框架，requests/scrapy/selenium 为主的爬虫框架，正则表达式/CSS/Xpath/ 等信息提取方式，写过 PYQT5                        的多线程 GUI 桌面应用，工作上面一般都是 Python 的自动化编程</li>
+<li>Linux 技能树：Ansible 自动化部署的使用，云服务部署及运维、常用 shell 命令及脚本编写</li>
+<li>CI/CD 技能树：Jenkins 持续构建和打包，容器化构建和部署，个人部署通常使用 docker 及 docker-compose 的方式，由于公司使用 murano 作为编排，所以很可惜工作上没有接触到 K8S，目前是尝试自己入门 K8S</li>
+<li>数据库技能树：常用 MySQL 作为 web 后端数据库，MongoDB 作为爬虫信息存储，Redis 用作缓存，熟悉常规的 CURD 操作</li>
+<li>前端技能树：写过 vue 项目，了解基本用法；熟悉 HTML 基本规范，对 CSS 常规用法了解，JavaScript 主要使用 jQuery 库，熟悉 Bootstrap 框架，熟悉前端 SEO</li>
+<li>博主 Github 地址：<a href="https://github.com/Hopetree">https://github.com/Hopetree</a></li>
+<li>联系邮箱：zlwork2014@163.com </li>
+</ul>
+<h2><strong>功能介绍</strong></h2>
+<hr />
+<ul>
+<li>Django 自带的后台管理系统，方便对于文章、用户及其他动态内容的管理</li>
+<li>文章分类、标签、浏览量统计以及规范的 SEO 设置</li>
+<li>用户认证系统，在 Django 自带的用户系统的基础上扩展 Oauth2.0 认证，支持微博、Github 等第三方认证</li>
+<li>文章评论系统，炫酷的输入框特效，支持 markdown 语法，二级评论结构和回复功能</li>
+<li>信息提醒功能，登录和退出提醒，收到评论和回复提醒，信息管理</li>
+<li>强大的全文搜索功能，只需要输入关键词就能展现全站与之关联的文章</li>
+<li>RSS 博客订阅功能及规范的 Sitemap 网站地图</li>
+<li>django-redis 支持的缓存系统，遵循缓存原则，加速网站打开速度</li>
+<li>实用的在线工具，实现在线爬虫的接口调用</li>
+<li>友情链接和推荐工具网站的展示</li>
+<li>RESTful API 风格的 API 接口  </li>
+</ul>
+<h2><strong>网站支持</strong></h2>
+<hr />
+<ul>
+<li>前端使用 Bootstrap4 + jQuery 支持响应式；图标使用 Font Awesome</li>
+<li>后端 Python 3.5+ 3.6+ 3.7+，Django 2.2+，其他依赖查看源码中 requirements.txt</li>
+<li>后台数据库使用 MySQL，缓存数据库使用 Redis</li>
+<li>网站部署使用 docker</li>
+<li>bootstrap-admin 用于美化后台管理系统，变成响应式界面</li>
+<li>django-allauth 等用于第三方用户登录</li>
+<li>django-haystack 和 jieba 用于支持全文搜索</li>
+<li>django-redis 缓存</li>
+<li>使用 django restframework 支持的 RESTful 风格的 API 接口</li>
+<li>其他依赖查看网站源码解释</li>
+</ul></div>
+        </div>
+        <div class="col-lg-4">
+            
+
+
+<!--个人空间-->
+<div class="card border-0 rounded-0 px-3 mb-2 mb-md-3 d-none d-lg-block" id="home-card">
+    <div class="card-header bg-white px-0">
+        <strong><i class="fa fa-paper-plane mr-2 f-17"></i>个人空间</strong>
+        <img class="float-right" id="theme-img"
+             src="../static/picture/toggle-light.png"
+             alt="theme-toggle" title="切换主题">
+    </div>
+    <div class="card-body px-0 pt-3 pb-1">
+        <div class="row text-center">
+            <div class="col">
+                <a href="https://github.com/Hopetree" target="_blank" title="进入博主的Github查看博客源码">
+                    <img style="max-width:40px" alt="博主的github" src="../static/picture/github.png">
+                    <p class="mt-2">Github</p>
+                </a>
+            </div>
+            <div class="col">
+                <a href="/timeline/" target="_blank" title="查看网站建站历程">
+                    <img style="max-width:40px" alt="网站的建站历程" src="../static/picture/blog.png">
+                    <p class="mt-2">Timeline</p>
+                </a>
+            </div>
+            <div class="col">
+                <a href="/feed/" target="_blank" title="订阅博客">
+                    <img style="max-width:40px" alt="订阅博客RSS" src="../static/picture/rss.png">
+                    <p class="mt-2">RSS订阅</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--文章分类-->
+<div class="card border-0 rounded-0 px-3 mb-2 mb-md-3" id="category-card">
+    <div class="card-header bg-white px-0">
+        <strong><i class="fa fa-book mr-2 f-17"></i>文章分类</strong>
+    </div>
+    
+    <ul class="list-group list-group-flush f-16">
+        
+        <li class="list-group-item d-flex justify-content-between align-items-center pr-2 py-2">
+            <a class="category-item" href="/category/ci-cd/"
+               title="查看【CI/CD】分类下所有文章">CI/CD</a>
+            <span class="badge text-center" title="当前分类下有6篇文章">6</span>
+        </li>
+        
+        <li class="list-group-item d-flex justify-content-between align-items-center pr-2 py-2">
+            <a class="category-item" href="/category/linux-notes/"
+               title="查看【Linux 笔记】分类下所有文章">Linux 笔记</a>
+            <span class="badge text-center" title="当前分类下有5篇文章">5</span>
+        </li>
+        
+        <li class="list-group-item d-flex justify-content-between align-items-center pr-2 py-2">
+            <a class="category-item" href="/category/Notebook/"
+               title="查看【Notebook】分类下所有文章">Notebook</a>
+            <span class="badge text-center" title="当前分类下有1篇文章">1</span>
+        </li>
+        
+        <li class="list-group-item d-flex justify-content-between align-items-center pr-2 py-2">
+            <a class="category-item" href="/category/Python-Web-development/"
+               title="查看【Python Web开发】分类下所有文章">Python Web开发</a>
+            <span class="badge text-center" title="当前分类下有8篇文章">8</span>
+        </li>
+        
+        <li class="list-group-item d-flex justify-content-between align-items-center pr-2 py-2">
+            <a class="category-item" href="/category/hello-python/"
+               title="查看【Python 基础】分类下所有文章">Python 基础</a>
+            <span class="badge text-center" title="当前分类下有4篇文章">4</span>
+        </li>
+        
+        <li class="list-group-item d-flex justify-content-between align-items-center pr-2 py-2">
+            <a class="category-item" href="/category/python-crawler/"
+               title="查看【Python 爬虫】分类下所有文章">Python 爬虫</a>
+            <span class="badge text-center" title="当前分类下有9篇文章">9</span>
+        </li>
+        
+        <li class="list-group-item d-flex justify-content-between align-items-center pr-2 py-2">
+            <a class="category-item" href="/category/Front-end/"
+               title="查看【Web 前端】分类下所有文章">Web 前端</a>
+            <span class="badge text-center" title="当前分类下有1篇文章">1</span>
+        </li>
+        
+        <li class="list-group-item d-flex justify-content-between align-items-center pr-2 py-2">
+            <a class="category-item" href="/category/docker/"
+               title="查看【容器化】分类下所有文章">容器化</a>
+            <span class="badge text-center" title="当前分类下有4篇文章">4</span>
+        </li>
+        
+        <li class="list-group-item d-flex justify-content-between align-items-center pr-2 py-2">
+            <a class="category-item" href="/category/Operation-and-maintenance-automation/"
+               title="查看【自动化】分类下所有文章">自动化</a>
+            <span class="badge text-center" title="当前分类下有2篇文章">2</span>
+        </li>
+        
+    </ul>
+</div>
+<!--标签云-->
+<div class="card border-0 rounded-0 px-3 mb-2 mb-md-3" id="tag-card">
+    <div class="card-header bg-white px-0">
+        <strong><i class="fa fa-tags mr-2 f-17"></i>标&nbsp;签&nbsp;云</strong>
+    </div>
+    <div class="card-body px-0 py-3">
+        <div class="tag-cloud">
+            
+            
+            <a href="/tag/Virtualenv/" class="tags f-16" id="tag-1"
+               title="【Virtualenv】标签下有3篇文章">Virtualenv</a>
+            
+            <a href="/tag/Web-development/" class="tags f-16" id="tag-2"
+               title="【后端开发】标签下有10篇文章">后端开发</a>
+            
+            <a href="/tag/python-crawler/" class="tags f-16" id="tag-3"
+               title="【Python爬虫】标签下有8篇文章">Python爬虫</a>
+            
+            <a href="/tag/MD5/" class="tags f-16" id="tag-4"
+               title="【MD5加密】标签下有2篇文章">MD5加密</a>
+            
+            <a href="/tag/Requests/" class="tags f-16" id="tag-5"
+               title="【Requests】标签下有4篇文章">Requests</a>
+            
+            <a href="/tag/threading/" class="tags f-16" id="tag-6"
+               title="【多线程】标签下有4篇文章">多线程</a>
+            
+            <a href="/tag/multiprocessing/" class="tags f-16" id="tag-7"
+               title="【多进程】标签下有2篇文章">多进程</a>
+            
+            <a href="/tag/Django/" class="tags f-16" id="tag-8"
+               title="【Django】标签下有11篇文章">Django</a>
+            
+            <a href="/tag/MySQL/" class="tags f-16" id="tag-9"
+               title="【MySQL】标签下有4篇文章">MySQL</a>
+            
+            <a href="/tag/database/" class="tags f-16" id="tag-10"
+               title="【数据库】标签下有2篇文章">数据库</a>
+            
+            <a href="/tag/Nginx/" class="tags f-16" id="tag-11"
+               title="【Nginx】标签下有4篇文章">Nginx</a>
+            
+            <a href="/tag/Gunicorn/" class="tags f-16" id="tag-12"
+               title="【Gunicorn】标签下有1篇文章">Gunicorn</a>
+            
+            <a href="/tag/Redis/" class="tags f-16" id="tag-13"
+               title="【Redis】标签下有2篇文章">Redis</a>
+            
+            <a href="/tag/django-redis/" class="tags f-16" id="tag-14"
+               title="【django-redis】标签下有1篇文章">django-redis</a>
+            
+            <a href="/tag/cache/" class="tags f-16" id="tag-15"
+               title="【Cache】标签下有1篇文章">Cache</a>
+            
+            <a href="/tag/Linux/" class="tags f-16" id="tag-16"
+               title="【Linux】标签下有8篇文章">Linux</a>
+            
+            <a href="/tag/crontab/" class="tags f-16" id="tag-17"
+               title="【crontab】标签下有1篇文章">crontab</a>
+            
+            <a href="/tag/PhantomJS/" class="tags f-16" id="tag-18"
+               title="【PhantomJS】标签下有1篇文章">PhantomJS</a>
+            
+            <a href="/tag/selenium/" class="tags f-16" id="tag-19"
+               title="【Selenium】标签下有2篇文章">Selenium</a>
+            
+            <a href="/tag/queue/" class="tags f-16" id="tag-20"
+               title="【Queue】标签下有1篇文章">Queue</a>
+            
+            <a href="/tag/configparser/" class="tags f-16" id="tag-21"
+               title="【configparser】标签下有1篇文章">configparser</a>
+            
+            <a href="/tag/paramiko/" class="tags f-16" id="tag-22"
+               title="【paramiko】标签下有1篇文章">paramiko</a>
+            
+            <a href="/tag/SSH/" class="tags f-16" id="tag-23"
+               title="【SSH】标签下有3篇文章">SSH</a>
+            
+            <a href="/tag/shell/" class="tags f-16" id="tag-24"
+               title="【shell】标签下有4篇文章">shell</a>
+            
+            <a href="/tag/Scrapy/" class="tags f-16" id="tag-25"
+               title="【Scrapy】标签下有2篇文章">Scrapy</a>
+            
+            <a href="/tag/docker/" class="tags f-16" id="tag-26"
+               title="【Docker】标签下有10篇文章">Docker</a>
+            
+            <a href="/tag/docker-compose/" class="tags f-16" id="tag-27"
+               title="【docker-compose】标签下有5篇文章">docker-compose</a>
+            
+            <a href="/tag/docker-build/" class="tags f-16" id="tag-28"
+               title="【容器化】标签下有8篇文章">容器化</a>
+            
+            <a href="/tag/centos/" class="tags f-16" id="tag-29"
+               title="【CentOS】标签下有2篇文章">CentOS</a>
+            
+            <a href="/tag/pip/" class="tags f-16" id="tag-30"
+               title="【pip】标签下有1篇文章">pip</a>
+            
+            <a href="/tag/argparse/" class="tags f-16" id="tag-31"
+               title="【argparse】标签下有1篇文章">argparse</a>
+            
+            <a href="/tag/click/" class="tags f-16" id="tag-32"
+               title="【Click】标签下有1篇文章">Click</a>
+            
+            <a href="/tag/OAuth2/" class="tags f-16" id="tag-33"
+               title="【OAuth2.0】标签下有1篇文章">OAuth2.0</a>
+            
+            <a href="/tag/django-allauth/" class="tags f-16" id="tag-34"
+               title="【django-allauth】标签下有1篇文章">django-allauth</a>
+            
+            <a href="/tag/git/" class="tags f-16" id="tag-35"
+               title="【Git】标签下有2篇文章">Git</a>
+            
+            <a href="/tag/ci-cd/" class="tags f-16" id="tag-36"
+               title="【CI/CD】标签下有6篇文章">CI/CD</a>
+            
+            <a href="/tag/Jenkins/" class="tags f-16" id="tag-37"
+               title="【Jenkins】标签下有6篇文章">Jenkins</a>
+            
+            <a href="/tag/Vue/" class="tags f-16" id="tag-38"
+               title="【Vue.js】标签下有3篇文章">Vue.js</a>
+            
+            <a href="/tag/ansible/" class="tags f-16" id="tag-39"
+               title="【Ansible】标签下有1篇文章">Ansible</a>
+            
+            <a href="/tag/jinja2/" class="tags f-16" id="tag-40"
+               title="【jinja2】标签下有1篇文章">jinja2</a>
+            
+            <a href="/tag/yaml/" class="tags f-16" id="tag-41"
+               title="【YAML】标签下有1篇文章">YAML</a>
+            
+            <a href="/tag/Bootstrap/" class="tags f-16" id="tag-42"
+               title="【Bootstrap】标签下有1篇文章">Bootstrap</a>
+            
+            <a href="/tag/Cookie/" class="tags f-16" id="tag-43"
+               title="【Cookie】标签下有1篇文章">Cookie</a>
+            
+        </div>
+    </div>
+</div>
+<!--友链-->
+<div class="d-none d-lg-block">
+    <div class="card border-0 rounded-0 px-3 mb-2 mb-md-3" id="friends-card">
+        <div class="card-header bg-white px-0">
+            <strong><i class="fa fa-link mr-2 f-17"></i>友情链接</strong>
+        </div>
+        <div class="card-body px-0 py-3">
+            <div class="tool-list">
+                
+                
+                <div class="w-50 float-left text-center mb-2">
+                    <div class="mx-2">
+                        <a href="https://github.com/Hopetree/izone" title="izone 博客项目的源代码" target="_blank">
+                            博客源码</a>
+                    </div>
+                </div>
+                
+                <div class="w-50 float-left text-center mb-2">
+                    <div class="mx-2">
+                        <a href="https://frostming.com" title="一个基于 Flask 开发的博客" target="_blank">
+                            Frost&#39;s Blog</a>
+                    </div>
+                </div>
+                
+                <div class="w-50 float-left text-center mb-2">
+                    <div class="mx-2">
+                        <a href="https://zmrenwu.com" title="Django 博客教程分享者" target="_blank">
+                            追梦人物</a>
+                    </div>
+                </div>
+                
+                <div class="w-50 float-left text-center mb-2">
+                    <div class="mx-2">
+                        <a href="https://www.dusaiphoto.com/" title="Django 搭建的博客，分享博客教程" target="_blank">
+                            杜赛的个人网站</a>
+                    </div>
+                </div>
+                
+                <div class="w-50 float-left text-center mb-2">
+                    <div class="mx-2">
+                        <a href="https://www.jerrycoding.com/" title="Jerry 的个人博客" target="_blank">
+                            Jerry Coding</a>
+                    </div>
+                </div>
+                
+                <div class="w-50 float-left text-center mb-2">
+                    <div class="mx-2">
+                        <a href="https://boywithacoin.cn/" title="Stray_Camel的个人技术博客" target="_blank">
+                            Stray_Camel</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+</main>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../static/js/jquery.min.js"></script>
+<!--js cookie 插件-->
+<script src="../static/js/js.cookie.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script>
+$(function(){var myElement=document.querySelector(".blog-navbar");var headroom=new Headroom(myElement);headroom.init()});
+</script>
+<script src="../static/js/base.js"></script>
+
+
+<footer class="container-fluid mt-4 py-0">
+    <div class="card-body text-center px-0 f-14">
+        <p class="card-text mb-1">Copyright&nbsp;&copy;&nbsp;<span id="year-info"></span>
+            <a href="https://github.com/Hopetree" target="_blank" title="博客作者的Github">Hopetree</a>.&nbsp;Powered&nbsp;by&nbsp;Django.
+        </p>
+        <p class="mb-0">
+            <a href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备17114114号-3</a>&nbsp;|
+            <a href="/sitemap.xml" target="_blank">Sitemap</a>
+            |&nbsp;<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275912930'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s96.cnzz.com/z_stat.php%3Fid%3D1275912930' type='text/javascript'%3E%3C/script%3E"));</script>
+            <span id="web-day"></span>
+        </p>
+        <script>function getnewYear(){var d = new Date();var old = new Date('2018/03/28');
+            var x = document.getElementById("year-info");
+            x.innerHTML=d.getFullYear();var y=document.getElementById("web-day");
+            var dd=Math.floor((d.getTime() - old.getTime()) / (24 * 3600 * 1000));
+            var d_str="| 网站已续航 "+dd+" 天";y.innerHTML=d_str;}getnewYear()</script>
+    </div>
+</footer>
+</body>
+</html>

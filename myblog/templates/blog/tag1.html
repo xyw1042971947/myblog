@@ -1,0 +1,56 @@
+{% extends 'blog/base_right.html' %}
+{% load staticfiles %}
+{% load blog_tags %}
+{% load humanize %}
+{% block body %}
+
+
+<div class="col-lg-8">
+    <div class="description bg-white px-3 pt-3 pb-1">
+        <p class="float-right mb-0">共<span class="mx-2 text-info">{{ paginator.count }}</span>篇</p>
+        <h1 class="f-17"><strong>{{ search_tag }}：{{ search_instance.name }}</strong></h1>
+        <p class="f-16">{{ search_instance.description }}</p>
+    </div>
+    <div class="text-secondary font-weight-bold py-2 f-15 choice">
+    {% url 'blog:tag' search_instance.slug as base_tag %}
+    {% url 'blog:tag_hot' search_instance.slug as base_hot_tag %}
+        <a class="pb-2 active" href="{{ base_tag }}">
+            <i class="fa fa-bars mr-1"></i>时间排序</a>
+        <a class="pb-2 ml-4 " href="{{ base_hot_tag }}">
+            <i class="fa fa-fire mr-1"></i>热度排序</a>
+    </div>
+    <div class="summary-list">
+        {% for article in articles %}
+        <div class="media mb-1 mb-sm-2 p-2 p-lg-3">
+            <div class="align-self-center mr-2 mr-lg-3 w-25 modal-open">
+                <a href="{{ article.get_absolute_url }}" target="_blank">
+                    <img class="w-100 article-img" src="{{ article.img_link }}" alt="{{ article.title }}">
+                </a>
+            </div>
+            <div class="media-body">
+                <img class="float-right top-article-img" src="/static/picture/top.png">
+                <div class="text-muted mb-2 f-12">
+                    <img class="avatar" src="/media/{{ article.author.avatar }}" alt="{{ article.author.username }}">
+                    <span>{{ article.author.username }}</span>
+                    <span><i class="fa fa-calendar-times-o ml-2 mr-1"></i>{{article.create_date|naturaltime}}</span>
+                </div>
+                <h2 class="mt-0 font-weight-bold text-info f-17">
+                    <a href="{{ article.get_absolute_url }}" target="_blank">{{ article.title }}</a>
+                </h2>
+                <p class="d-none d-sm-block mb-2 f-15">{{article.summary|truncatechars_html:130}}</p>
+                <p class="d-block d-sm-none mb-2 f-15">{{article.summary|truncatechars_html:40}}</p>
+                <div class="text-muted mb-0 f-12">
+                    <a class="cate" href="{{ article.category.get_absolute_url }}" title="查看当前分类下更多文章">
+                        <i class="fa fa-book mr-1"></i>{{ article.category }}</a>
+                    <span><i class="fa fa-eye ml-2 mr-1"></i>{{ article.views }}</span>
+                    <a href="/article/theme-change/#comment-block" target="_blank" title="查看文章评论">
+                        <i class="fa fa-comments ml-2 mr-1"></i>2</a>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+    {% include 'blog/pagecut.html' %}
+</div>
+{% endblock %}

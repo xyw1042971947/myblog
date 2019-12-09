@@ -1,0 +1,721 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="referrer" content="origin">
+    <!-- TDK and ICO -->
+    <title>网站建站历程，查看博客搭建Timeline时间轴_TendCode</title>
+    
+<meta name="description"
+      content="本网站是一个采用django+bootstrap4搭建的个人博客，本着学习和分享的精神，博客项目开源，源代码可以到我的Github中查看，网站建站历程可以查看页面Timeline内容。">
+<meta name="keywords" content="Timeline时间轴,个人博客建站日志">
+
+    <link rel="shortcut icon" href="/static/blog/img/favicon.ico" type="image/x-icon"/>
+    <!-- Bootstrap and font-awesome CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../static/js/headroom.min.js"></script>
+    <!-- blog CSS -->
+    <link href="../static/css/base.css" rel="stylesheet">
+    
+<link href="../static/css/timeline.css" rel="stylesheet">
+
+    <!--根据cookies判断是否启用暗色主题-->
+    
+</head>
+<body>
+<!--导航开始-->
+
+<nav class="navbar navbar-expand-md bg-white fixed-top blog-navbar py-md-0">
+    <a class="navbar-brand d-md-none d-lg-block" id="site-logo-name" href="/">
+        <strong class="px-2">TendCode</strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-2">
+                
+                <a class="nav-link py-md-3 " href="/"><i class="fa fa-home mr-1"></i>首页<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-2">
+                
+                <a class="nav-link py-md-3 " href="/archive/"><i class="fa fa-sitemap mr-1"></i>归档</a>
+            </li>
+            
+            <li class="nav-item mr-2">
+                
+                <a class="nav-link py-md-3 " href="/tool/"><i class="fa fa-balance-scale mr-1"></i>在线工具</a>
+            </li>
+            
+            
+            <li class="nav-item mr-2 d-none d-lg-block">
+                <a class="nav-link py-md-3" href="https://hao.tendcode.com" target="_blank"><i class="fa fa-chrome mr-1"></i>微草导航</a>
+            </li>
+            
+            
+            <li class="nav-item mr-2 ">
+                
+                <a class="nav-link py-md-3 " href="/about/"><i class="fa fa-anchor mr-1"></i>关于</a>
+            </li>
+            <form class="nav-item navbar-form mr-2 py-md-2" role="search" method="get" id="searchform" action="/search/">
+                <div class="input-group">
+                    <input type="search" name="q" class="form-control rounded-0" placeholder="站内搜索" autocomplete="off" required=True>
+                    <div class="input-group-btn">
+                        <button class="btn btn-info rounded-0" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </div><!-- /input-group -->
+            </form>
+        </ul>
+        <ul class="navbar-nav">
+            
+            <li class="nav-item mr-2">
+                <a class="nav-link py-md-3" href="/accounts/login/?next=/timeline/">登录</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-md-3" href="/accounts/signup/?next=/timeline/">注册</a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+<!--导航结束-->
+
+<!--消息块-->
+
+
+<!--回到顶部按钮-->
+<div class="text-center" id="to-top">
+    <i class="fa fa-chevron-up" id="btn-top" title="回到顶部"></i>
+</div>
+
+<!--主要内容块-->
+<main>
+<div class="container">
+    <div class="page-header mt-0">
+        <h1 id="timeline"><i class="fa fa-hourglass-half mr-2"></i>建站日志</h1>
+    </div>
+    <ul class="timeline" id="timeline">
+        
+        
+        <li>
+            
+            <div class="timeline-badge info"><i class="fa fa-diamond"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">博客基础版开发完成，使用 Django + Bootstrap3</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2017-12-20</span>
+                        <span class="pull-right" id="star" title="【4颗星】：大更新，涉及到应用的增减"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>实现基本的博客应用，有文章页，文章分类和标签云</li>
+<li>用户登录系统，使用 Django 自带的用户模型，实现用户注册、登录、登出、修改密码、找回密码等基本功能</li>
+<li>后端使用 Django 自带的 admin，但是使用了 bootstrap 插件，使得界面更加美观，前端同样使用 bootstrap3</li>
+<li>文章内容使用 markdown 保存，前端渲染成 HTML 格式</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge primary"><i class="fa fa-comment"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">增加文章评论系统，实现评论和回复功能</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2017-12-30</span>
+                        <span class="pull-right" id="star" title="【3颗星】：中等更新，一般会增加或减少模块，有表格的迁移"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>文章评论系统需要绑定对应的文章和用户</li>
+<li>为了美观，评论采用最高二级评论的结构展现，可以回复评论</li>
+<li>评论采用 ajax 提价的方式传送数据，表单接受 markdown 格式</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge info"><i class="fa fa-user-circle-o"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">用户系统重写，实现第三方账号登录</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018-01-01</span>
+                        <span class="pull-right" id="star" title="【4颗星】：大更新，涉及到应用的增减"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>用户系统在 Django 自带的用户模型基础上拓展，引用 django-allauth 实现第三方账号登录</li>
+<li>扩展了用户模型的字段，新增加用户昵称、图像、链接等字段</li>
+<li>用户头像的字段使用了第三方插件，可以自动生成指定大小的头像</li>
+<li>目前支持 Github 和 Weibo 账号的登录，Github 可以直接登录，Weibo 需要绑定一个本地账号才行</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li>
+            
+            <div class="timeline-badge warning"><i class="fa fa-bell"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">实现评论和回复提醒功能</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018-01-03</span>
+                        <span class="pull-right" id="star" title="【3颗星】：中等更新，一般会增加或减少模块，有表格的迁移"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>之前虽然实现了评论功能，但是有评论和回复是无法及时知道的，所以需要一个提醒功能</li>
+<li>提醒功能没有使用第三方库，自己实现的，主要依赖 Django 的信号机制</li>
+<li>有评论或者回复产生，会判断评论的用户与文章的作者还有原评论用户的关系，生成提醒信息</li>
+<li>新增一个用户提醒信息的页面，登录用户可以标记和删除提醒信息</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge danger"><i class="fa fa-search"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">全文搜索功能的实现</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018-01-17</span>
+                        <span class="pull-right" id="star" title="【3颗星】：中等更新，一般会增加或减少模块，有表格的迁移"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>全文搜索功能可以实现一个搜索框，只要输入关键词就可以展现与之相关联的所有文章的列表</li>
+<li>搜索功能依赖 jieba 分词和 haystack 搜索引擎</li>
+<li>每当有一篇文章生成，就会自动按照 jieba 分词给文章的标题和内容建立索引，搜索的时候按照索引展现，速度很快</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li>
+            
+            <div class="timeline-badge success"><i class="fa fa-html5"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">博客整体改版，前端模板更换成 Bootstrap4</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018-03-02</span>
+                        <span class="pull-right" id="star" title="【5颗星】：最大程度更新，一般涉及多个应用和表格的变动"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>为了前端页面更加扁平化，将 Bootstrap3 改为 Bootstrap4</li>
+<li>评论的表单使用了一个 js 的 markdown 编辑器插件，并且增加了一个输入的动画特效，非常炫酷</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li>
+            
+            <div class="timeline-badge danger"><i class="fa fa-commenting-o"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">更改阅读量的增加的判断机制和评论提交的时间间隔</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018-03-03</span>
+                        <span class="pull-right" id="star" title="【2颗星】：小更新，小幅度调整，一般不会迁移表格"><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>之间的阅读量是只要刷新页面就会增加，不真实，现在使用 Django 的 session 来记录访客的浏览记录，相隔2小时内的多次浏览只记录一次</li>
+<li>前端 js 提交评论的代码中增加提交时间记录，设置两次提交的间隔</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge warning"><i class="fa fa-gavel"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">增加在线工具应用，提供一些 Python 实现的工具</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018-03-06</span>
+                        <span class="pull-right" id="star" title="【2颗星】：小更新，小幅度调整，一般不会迁移表格"><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>在线工具都是静态页面，功能实现都是使用 Python</li>
+<li>目前提供站长工具、爬虫工具、前端工具等</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li>
+            
+            <div class="timeline-badge info"><i class="fa fa-feed"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">添加 sitemap 和 feed 功能以及网站 robots.txt 文件</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018-03-21</span>
+                        <span class="pull-right" id="star" title="【2颗星】：小更新，小幅度调整，一般不会迁移表格"><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>sitemap 使用 Django 自带的模块实现，可以提供给搜索引擎抓取网页链接的快捷途径</li>
+<li>feed 也是用 Django 自带的模块实现，用户可以订阅博客内容</li>
+<li>robots.txt 文件按照搜索引擎的规范制作</li>
+<li>还有一个死链页面，可以在后台填入一些网站的死链，通过网页展现的方式交给搜索引擎处理</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge danger"><i class="fa fa-chrome"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">博客域名更改</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018-04-11</span>
+                        <span class="pull-right" id="star" title="【5颗星】：最大程度更新，一般涉及多个应用和表格的变动"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>自己注册了一个非常喜欢的域名 tendcode.com，意思是 Tend to code，可以翻译为走近代码的意思</li>
+<li>将之前的 seoerzone.com 域名部署的博客重新放到新域名上面</li>
+<li>博客功能持续改善和扩展中</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li>
+            
+            <div class="timeline-badge info"><i class="fa fa-database"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">添加 django-redis 配置，使用 redis 作为缓存系统</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018-04-18</span>
+                        <span class="pull-right" id="star" title="【3颗星】：中等更新，一般会增加或减少模块，有表格的迁移"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>配置 django-redis 作为默认的缓存</li>
+<li>添加文章的 markdown 为缓存，减少 markdown 转换的过程</li>
+<li>添加右边栏为缓存，不用实时更新</li>
+<li>添加 timeline 部分为缓存，减少重复读取数据库的过程</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge success"><i class="fa fa-key"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">给博客添加 RESTful API 接口</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018-05-02</span>
+                        <span class="pull-right" id="star" title="【4颗星】：大更新，涉及到应用的增减"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>使用最受欢迎的 Django REST framework 作为 API 接口的支持库</li>
+<li>将博客的用户、文章、标签、分类、时间线等制作成符合 RESTful API 风格的接口</li>
+<li>设置每个接口的用户权限</li>
+<li>测试接口</li>
+<li>后续会深入研究 Django REST framework 这个框架的更多用法</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li>
+            
+            <div class="timeline-badge info"><i class="fa fa-flag"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">将博客的项目划分成三个不同的主要版本，实现功能自由选择</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018-08-26</span>
+                        <span class="pull-right" id="star" title="【5颗星】：最大程度更新，一般涉及多个应用和表格的变动"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>实现了很多人提到的功能：自由选择需要的功能，具体是“在线工具”和“API接口”模块可以在设置中通过一个变量来选择是否在前后台显示</li>
+<li>首先在 Github 中将博客项目划分成了三个主要分支，分别代表了三个不同的版本</li>
+<li><a href="https://github.com/Hopetree/izone/tree/feature/1.0">feature/1.0</a>版本目前划分为博客的基础版，将数据库从 MySQL 改成自带的数据库，不需要依赖第三方数据库了；同时，缓存数据库也不再依赖 redis，而是引入 Django 默认推荐的一个第三方包</li>
+<li><a href="https://github.com/Hopetree/izone/tree/feature/2.0">feature/2.0</a>版本目前划分为博客的升级版，跟1.0的版本相比，其实主要就是有关两个数据库的差别</li>
+<li>今后，master会合入2.0版本的分支代码</li>
+<li>dev 分支将会作为我自己的博客添加一些个人需求的功能而存在的分支，代码一样会开源，但是不会给相关的设置参数说明，所以不建议拉取这个分支的代码</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge danger"><i class="fa fa-css3"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">bootstrap 静态文件地址变更</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018-10-02</span>
+                        <span class="pull-right" id="star" title="【2颗星】：小更新，小幅度调整，一般不会迁移表格"><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>博客中使用 bootstrap 静态文件的地址变更了，这个变更是一个被迫变更，原因是官方更改了原来的地址，具体变更可以查看我 GitHub 的<a href="https://github.com/Hopetree/izone/commit/8f4dcff8d3a66609f3910563c804d960864ef71f">提交记录</a></li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li>
+            
+            <div class="timeline-badge primary"><i class="fa fa-flag"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">博客改成容器化适配版本，部署方式改为容器化</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018-12-01</span>
+                        <span class="pull-right" id="star" title="【5颗星】：最大程度更新，一般涉及多个应用和表格的变动"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>最主要的改动点在 settings 配置文件，将之前需要单独添加的一个配置文件 base_settings.py 去掉，改为读取系统环境变量的方式替换自己的配置项，方便容器化和虚拟化同时适配</li>
+<li>部署方式已经改为容器化，具体的容器化操作可以看我 <a href="https://github.com/Hopetree/izone-docker">容器化部署项目</a></li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge success"><i class="fa fa-fire"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">添加文字置顶字段，并在文章列表中排序</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019-01-13</span>
+                        <span class="pull-right" id="star" title="【2颗星】：小更新，小幅度调整，一般不会迁移表格"><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>文章添加置顶字段，同时设置默认排序为置顶有限</li>
+<li>文章列表和 admin 中添加置顶字段优先排序</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li>
+            
+            <div class="timeline-badge success"><i class="fa fa-expeditedssl"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">网站使用 HTTPS，网站跟七牛云形成图床映射</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019-01-29</span>
+                        <span class="pull-right" id="star" title="【2颗星】：小更新，小幅度调整，一般不会迁移表格"><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>step1：在阿里云申请免费的 SSL 证书</li>
+<li>step2：在 nginx 配置文件中添加证书路径，并配置 443 端口</li>
+<li>step3：容器配置文件中添加 nginx 容器的端口443</li>
+<li>step4：nginx 配置中设置本地和图床的映射关系，并设置 nginx 缓存</li>
+<li>step5: 其他调整，比如将网页中没有用 HTTPS 的静态文件都改成本地，把微博的图像地址替换成 https 的</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge danger"><i class="fa fa-database"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">MySQL 的编码格式修改为 utf8</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019-02-01</span>
+                        <span class="pull-right" id="star" title="【3颗星】：中等更新，一般会增加或减少模块，有表格的迁移"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>MySQL 数据库的格式以前是 utf8mb4，当初为了支持 emoji 表情，但是实际上我在数据库中存放的数据并不是 emoji 的编码格式，只是一个替换符号而已，所以不需要使用这个格式，现在更改为主流的 utf8 即可</li>
+<li>容器化部署的代码做出相应的修改</li>
+<li>Todo：后续会把评论里面的 emoji 表情替换成图片的形式展现到前台，这样就不会再根据使用的系统或者浏览器的不同导致看到的效果不一样了</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li>
+            
+            <div class="timeline-badge warning"><i class="fa fa-comments-o"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">评论排序方式改成时间逆序</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019-02-15</span>
+                        <span class="pull-right" id="star" title="【1颗星】：微更新，涉及轻微调整或者后期规划了内容"><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>评论的排序方式改成时间逆序，先显示最近的评论，这样也方便用户查看</li>
+<li>评论只显示最近的20条父评论，减少页面长度，实际上也没有看20条以上的评论</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge success"><i class="fa fa-user"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">开启用户认证，并根据认证情况展示用户个人网站</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019-03-07</span>
+                        <span class="pull-right" id="star" title="【3颗星】：中等更新，一般会增加或减少模块，有表格的迁移"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>首先是开启用户的邮箱认证，注册的时候会自动发送邮件请求认证，注册成功的用户也可以后续主动提交认证请求</li>
+<li>认证的用户（Github 和 Weibo 默认为已认证用户）如果有自己的个人网站，在评论的时候就可以在自己的名称上面生成跳转链接</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li>
+            
+            <div class="timeline-badge primary"><i class="fa fa-space-shuttle"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">更换服务器，容器化部署方式升级，镜像自动化构建</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019-07-04</span>
+                        <span class="pull-right" id="star" title="【5颗星】：最大程度更新，一般涉及多个应用和表格的变动"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>昨晚完成了服务器切换（1U1G到1U2G，Ubuntu 到 CentOS 7.6），项目迁移成功，整个过程持续不到5分钟</li>
+<li>保持容器化部署，只不过新的部署方式中不再在本地进行 izone 的镜像构建，而是直接拉取远程仓库中已经构建好的镜像</li>
+<li>izone 项目镜像构建实现自动化构建（github 代码发生修改自动触发构建），整个构建过程使用阿里云的自动化构建，仓库也是阿里云的，都是免费使用</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge danger"><i class="fa fa-cny"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">添加打赏组件，文章内容页最下面添加打赏按钮</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019-07-27</span>
+                        <span class="pull-right" id="star" title="【2颗星】：小更新，小幅度调整，一般不会迁移表格"><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>打赏图片默认是隐藏的，当点击打赏按钮之后显示图片</li>
+<li>打赏图片可以到静态文件中更换，图片显示为响应式</li>
+<li>支付宝和微信打赏</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge warning"><i class="fa fa-asterisk"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">关于新增工具、更换静态源、修改APP名称的调整</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019-08-27</span>
+                        <span class="pull-right" id="star" title="【2颗星】：小更新，小幅度调整，一般不会迁移表格"><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>最近新增了一个 docker 镜像查询在线工具，可以查询官方镜像版本的基本信息</li>
+<li>修改 bootstrap4 的静态源，之前的版本是测试版，已经更改为正式版，之前有不支持的内容已经全面支持</li>
+<li>修改后台APP的显示名称为中文</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li>
+            
+            <div class="timeline-badge info"><i class="fa fa-photo"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">添加图片预览功能</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019-09-01</span>
+                        <span class="pull-right" id="star" title="【1颗星】：微更新，涉及轻微调整或者后期规划了内容"><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>文章内容页点击图片可以大图预览</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge success"><i class="fa fa-pencil"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">Django 版本从1.11.x 升级到2.1.x</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019-09-20</span>
+                        <span class="pull-right" id="star" title="【4颗星】：大更新，涉及到应用的增减"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>django版本升级到django2.0+，其他相关依赖也全部升级为可用版本的最新版</li>
+<li>修复升级版本引发的各种错误</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li class="timeline-inverted">
+            <div class="timeline-badge warning"><i class="fa fa-pencil"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">Django 版本从2.1.x 升级到2.2.x</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019-10-10</span>
+                        <span class="pull-right" id="star" title="【3颗星】：中等更新，一般会增加或减少模块，有表格的迁移"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>django 版本升级到最新版的2.2.6</li>
+<li>修改 MySQL 依赖库为官方默认的 mysqlclient</li>
+<li>基础镜像改为 python:3.6</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+        
+        <li>
+            
+            <div class="timeline-badge primary"><i class="fa fa-html5"></i></div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h2 class="timeline-title text-info">博客添加暗色主题，亮色和暗色主题可以自主切换</h2>
+                    <p class="mb-1">
+                        <span class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019-11-21</span>
+                        <span class="pull-right" id="star" title="【4颗星】：大更新，涉及到应用的增减"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+<li>添加一套暗色主题，色调参考来自V2EX</li>
+<li>添加主题切换的按钮，通过js控制cookies来实现主题切换</li>
+</ul>
+                </div>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+</main>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../static/js/jquery.min.js"></script>
+<!--js cookie 插件-->
+<script src="../static/js/js.cookie.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script>
+$(function(){var myElement=document.querySelector(".blog-navbar");var headroom=new Headroom(myElement);headroom.init()});
+</script>
+<script src="../static/js/base.js"></script>
+
+
+<footer class="container-fluid mt-4 py-0">
+    <div class="card-body text-center px-0 f-14">
+        <p class="card-text mb-1">Copyright&nbsp;&copy;&nbsp;<span id="year-info"></span>
+            <a href="https://github.com/Hopetree" target="_blank" title="博客作者的Github">Hopetree</a>.&nbsp;Powered&nbsp;by&nbsp;Django.
+        </p>
+        <p class="mb-0">
+            <a href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备17114114号-3</a>&nbsp;|
+            <a href="/sitemap.xml" target="_blank">Sitemap</a>
+            |&nbsp;<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275912930'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s96.cnzz.com/z_stat.php%3Fid%3D1275912930' type='text/javascript'%3E%3C/script%3E"));</script>
+            <span id="web-day"></span>
+        </p>
+        <script>function getnewYear(){var d = new Date();var old = new Date('2018/03/28');
+            var x = document.getElementById("year-info");
+            x.innerHTML=d.getFullYear();var y=document.getElementById("web-day");
+            var dd=Math.floor((d.getTime() - old.getTime()) / (24 * 3600 * 1000));
+            var d_str="| 网站已续航 "+dd+" 天";y.innerHTML=d_str;}getnewYear()</script>
+    </div>
+</footer>
+</body>
+</html>

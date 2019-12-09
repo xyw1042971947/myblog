@@ -1,0 +1,81 @@
+{% extends 'blog/base.html'%}
+{% load staticfiles %}
+{% load blog_tags %}
+{% block base_right %}
+<div class="row">
+    {% block archive %}{% endblock archive %}
+    {% block body %}{% endblock body %}
+    <div class="col-lg-4">
+        <!--个人空间-->
+        <div class="card border-0 rounded-0 px-3 mb-2 mb-md-3 d-none d-lg-block" id="home-card">
+            <div class="card-header bg-white px-0">
+                <strong><i class="fa fa-paper-plane mr-2 f-17"></i>个人空间</strong>
+                <img class="float-right" id="theme-img" src="/static/picture/toggle-light.png" alt="theme-toggle"
+                    title="切换主题">
+            </div>
+            <div class="card-body px-0 pt-3 pb-1">
+                <div class="row text-center">
+                    <div class="col">
+                        <a href="https://github.com/Hopetree" target="_blank" title="进入博主的Github查看博客源码">
+                            <img style="max-width:40px" alt="博主的github" src="/static/picture/github.png">
+                            <p class="mt-2">Github</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="/timeline/" target="_blank" title="查看网站建站历程">
+                            <img style="max-width:40px" alt="网站的建站历程" src="/static/picture/blog.png">
+                            <p class="mt-2">Timeline</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="/feed/" target="_blank" title="订阅博客">
+                            <img style="max-width:40px" alt="订阅博客RSS" src="/static/picture/rss.png">
+                            <p class="mt-2">RSS订阅</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--文章分类-->
+        {% include 'blog/index_category.html' %}
+        <!--标签云-->
+        {% get_tag_list as tags %}
+        <div class="card border-0 rounded-0 px-3 mb-2 mb-md-3" id="tag-card">
+            <div class="card-header bg-white px-0">
+                <strong><i class="fa fa-tags mr-2 f-17"></i>标&nbsp;签&nbsp;云</strong>
+            </div>
+            <div class="card-body px-0 py-3">
+            
+                <div class="tag-cloud">
+                {% for tag in tags %}
+                    <a href="{{tag.get_absolute_url}}" class="tags f-16" id="tag-1" title="【{{ tag.name }}】标签下有{{ tag.total_num }}篇文章">{{ tag.name }}</a>
+                {% endfor %}
+                </div>
+            </div>
+            
+        </div>
+        <!--友链-->
+        {% get_friendlink_list as friendlinks %}
+        <div class="d-none d-lg-block">
+            <div class="card border-0 rounded-0 px-3 mb-2 mb-md-3" id="friends-card">
+                <div class="card-header bg-white px-0">
+                    <strong><i class="fa fa-link mr-2 f-17"></i>友情链接</strong>
+                </div>
+                <div class="card-body px-0 py-3">
+                    <div class="tool-list">
+                    {% for friendlink in friendlinks %}
+                        <div class="w-50 float-left text-center mb-2">
+                            <div class="mx-2">
+                                <a href="{{friendlink.link}}" title="{{ friendlink.description }}" target="_blank">
+                                    {{ friendlink.name }}</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+{% endblock %}
