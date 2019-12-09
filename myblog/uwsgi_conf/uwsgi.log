@@ -1,0 +1,60 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Dec  9 15:35:46 2019] ***
+compiled with version: 7.4.0 on 09 December 2019 07:04:20
+os: Linux-5.0.0-37-generic #40~18.04.1-Ubuntu SMP Thu Nov 14 12:06:39 UTC 2019
+nodename: ywxiang-MS-7B79
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 12
+current working directory: /home/ywxiang/BlogProject/myblog/uwsgi_conf
+writing pidfile to uwsgi.pid
+detected binary path: /home/ywxiang/.virtualenvs/myizone/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ywxiang/BlogProject/myblog/
+your processes number limit is 63749
+your memory page size is 4096 bytes
+detected max file descriptor number: 8192
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 6
+uwsgi socket 0 bound to TCP address 127.0.0.1:39011 (port auto-assigned) fd 3
+Python version: 3.6.8 (default, Oct  7 2019, 12:59:55)  [GCC 8.3.0]
+Python main interpreter initialized at 0x55cbec648050
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55cbec648050 pid: 27084 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 27084)
+spawned uWSGI worker 1 (pid: 27088, cores: 2)
+spawned uWSGI worker 2 (pid: 27089, cores: 2)
+spawned uWSGI worker 3 (pid: 27091, cores: 2)
+spawned uWSGI worker 4 (pid: 27093, cores: 2)
+spawned uWSGI http 1 (pid: 27095)
+[pid: 27093|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 896 bytes} [Mon Dec  9 15:37:15 2019] GET / => generated 22174 bytes in 220 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /static/css/bootstrap.min.css
+Not Found: /static/css/font-awesome.min.css
+[pid: 27093|app: 0|req: 3/2] 127.0.0.1 () {40 vars in 965 bytes} [Mon Dec  9 15:37:15 2019] GET /static/css/bootstrap.min.css => generated 4325 bytes in 14 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 27093|app: 0|req: 3/3] 127.0.0.1 () {40 vars in 971 bytes} [Mon Dec  9 15:37:15 2019] GET /static/css/font-awesome.min.css => generated 4334 bytes in 14 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/css/base.css
+[pid: 27089|app: 0|req: 1/4] 127.0.0.1 () {40 vars in 947 bytes} [Mon Dec  9 15:37:15 2019] GET /static/css/base.css => generated 4298 bytes in 145 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 27089|app: 0|req: 2/5] 127.0.0.1 () {38 vars in 896 bytes} [Mon Dec  9 15:37:15 2019] GET /media/avatar/default.png => generated 5877 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 4 headers in 141 bytes (0 switches on core 1)
+Not Found: /static/picture/top.png
+[pid: 27093|app: 0|req: 5/6] 127.0.0.1 () {38 vars in 894 bytes} [Mon Dec  9 15:37:15 2019] GET /static/picture/top.png => generated 4307 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 27093|app: 0|req: 5/7] 127.0.0.1 () {38 vars in 984 bytes} [Mon Dec  9 15:37:15 2019] GET /media/avatar/2019/11/29/b21bb051f81986183a28291b47ed2e738ad4e6c6.jpg => generated 3345 bytes in 8 msecs via sendfile() (HTTP/1.1 200) 4 headers in 142 bytes (0 switches on core 0)
+Not Found: /static/picture/github.png
+Not Found: /static/picture/toggle-light.png
+Not Found: /static/picture/blog.png
+[pid: 27088|app: 0|req: 2/8] 127.0.0.1 () {38 vars in 899 bytes} [Mon Dec  9 15:37:15 2019] GET /static/picture/github.png => generated 4316 bytes in 155 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 27088|app: 0|req: 2/9] 127.0.0.1 () {40 vars in 950 bytes} [Mon Dec  9 15:37:15 2019] GET /static/picture/blog.png => generated 4310 bytes in 154 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /static/picture/rss.png
+[pid: 27091|app: 0|req: 2/10] 127.0.0.1 () {38 vars in 911 bytes} [Mon Dec  9 15:37:15 2019] GET /static/picture/toggle-light.png => generated 4334 bytes in 157 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 27091|app: 0|req: 2/11] 127.0.0.1 () {40 vars in 948 bytes} [Mon Dec  9 15:37:15 2019] GET /static/picture/rss.png => generated 4307 bytes in 154 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 27095)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
