@@ -27,7 +27,7 @@ SECRET_KEY = '&+%a5u2*@it7)&mj_jz1!me=d5_#hps+d4_3=a(0_pk&#df8g!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1','112.124.6.9',]
 
 AUTH_USER_MODEL = 'users.UserProfile'
 
@@ -117,7 +117,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myblog',
         'HOST': 'localhost',
-        'USER': 'ywxiang',
+        'USER': 'root',
         'PASSWORD': 'Xyw@172410',
     }
 }
@@ -160,6 +160,8 @@ USE_TZ = False  # 默认是Ture，时间是utc时间，由于我们要用本地�
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
+
+STATIC_ROOT = os.path.join(BASE_DIR, '/staticcoll')
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
