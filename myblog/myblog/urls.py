@@ -19,7 +19,8 @@ from django.contrib import admin
 from django.conf import settings
 
 from apps.users.views import loginView, LogoutView
-from apps.blog.views import IndexView, CeshiView, ArchiveListView
+from apps.blog.views import IndexView, ArchiveListView, Ceshi
+from blog.feeds import AllArticleRssFeed
 import xadmin
 
 
@@ -32,9 +33,8 @@ urlpatterns = [
     url(r'^accounts/', include('users.urls', namespace='users')),#账户
 
     url(r'archive/', ArchiveListView.as_view(), name='archive'), #归档
-
-    url(r'ceshi/', CeshiView.as_view(), name='ceshi'), #测试
-
+    url(r'^feed/$', AllArticleRssFeed(), name='rss'),   # rss订阅
+    url(r'^ceshi/$', Ceshi.as_view(), name='ceshi'),   # 测试
     url(r'login/', loginView.as_view(), name='login'),
     url(r'logout/', LogoutView.as_view(), name='logout'),
     url(r'hot/',IndexView.as_view(), {"sort": "V"}, name='hot')

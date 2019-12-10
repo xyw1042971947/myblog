@@ -4,6 +4,9 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.conf import settings
 from django.utils.text import slugify
+from haystack.generic_views import SearchView  # 导入搜索视图
+from haystack.query import SearchQuerySet
+from django.core.cache import cache
 
 from markdown.extensions.toc import TocExtension
 import markdown
@@ -11,6 +14,9 @@ import markdown
 from blog.models import Article, Category, Tag
 # Create your views here.
 
+
+class Ceshi(generic.TemplateView):
+    template_name = '404.html'
 
 class IndexView(generic.ListView):
     '''
@@ -60,11 +66,18 @@ class ArticleDetailView(generic.DetailView):
                     obj.update_views()
                     ses[the_key] = time.time()
 
-        md = markdown.Markdown(extensions=[
-            'markdown.extensions.extra',
-            'markdown.extensions.codehilite',
-            TocExtension(slugify=slugify),
-        ])
+        ud = obj.update_date.strftime("%Y%m%d%H%M%S")
+        md_key = '{}_md_{}'.format(obj.id, ud)
+        cache_md = cache.get(md_key)
+        if cache_md:
+            md = cache_md
+        else:
+            md = markdown.Markdown(extensions=[
+                'markdown.extensions.extra',
+                'markdown.extensions.codehilite',
+                TocExtension(slugify=slugify),
+            ])
+            cache.set(md_key, md, 60 * 60 * 12)
         obj.body = md.convert(obj.body)
         obj.toc = md.toc
         return obj
@@ -134,5 +147,10 @@ class ArchiveListView(generic.ListView):
     paginate_by = 200
     paginate_orphans = 50    
 
-class CeshiView(generic.TemplateView):
-    template_name = 'account/profile.html'
+
+#重写搜索视图，可以增加一些额外的参数，且可以重新定义名称
+class MySearchView(SearchView):
+    context_object_name = 'search_list'
+    paginate_by = getattr(settings, 'BASE_PAGE_BY', None)
+    paginate_orphans = getattr(settings, 'BASE_ORPHANS', 0)
+    queryset = SearchQuerySet().order_by('-views')

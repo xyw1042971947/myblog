@@ -1,0 +1,15 @@
+{% extends 'blog/base.html'%}
+{% load static %}
+ {% block profile %} 
+<div class="row errorpage">
+    <div class="col align-self-center error-img text-center">
+        <div class="errorimg">
+            <img class="img-fluid" src="{% static 'blog/img/404.png'%}">
+        </div>
+        <div class="errormsg">
+            <h3>哇哦！你好像访问到了异次元世界...</h3>
+            <a href="javascript:history.go(-1);">返回地球</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

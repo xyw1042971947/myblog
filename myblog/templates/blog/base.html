@@ -9,16 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="referrer" content="origin">
     <!-- TDK and ICO -->
-    <title>Tend to Code_一个使用django和bootstrap搭建的个人博客_TendCode</title>
+    <title>'一个基于Github：https://github.com/Hopetree的个人博客',目前仅用于学习</title>
 
-    <meta name="description"
+    {% comment %} <meta name="description"
         content="TendCode是一个Django搭建的博客，本网站后端使用Django框架搭建，前端使用Bootstrap框架，主要分享博主在Python以及其他编程语言的学习心得。">
     <meta name="keywords" content="Python自学,Python爬虫,Django博客,Python web开发,个人博客">
     <!--站长验证-->
     <meta name="baidu-site-verification" content="sNWuPb0U4B" />
     <meta name="sogou_site_verification" content="3B35Ud7njX" />
     <meta name="shenma-site-verification" content="05809a2214c7c161432241f733560ddf_1548246599">
-    <meta name="360-site-verification" content="98e4595c433b13d10266ad8ea87ed539" />
+    <meta name="360-site-verification" content="98e4595c433b13d10266ad8ea87ed539" /> {% endcomment %}
 
     <link rel="shortcut icon" href="/static/blog/img/favicon.ico" type="image/x-icon" />
     <!-- Bootstrap and font-awesome CSS -->
@@ -27,8 +27,8 @@
     <script src="/static/js/headroom.min.js"></script>
     <!-- blog CSS -->
     <link href="/static/css/base.css" rel="stylesheet">
-
-    <!--根据cookies判断是否启用暗色主题-->
+{% comment %} 
+    <!--根据cookies判断是否启用暗色主题--> {% endcomment %}
     {% block top-file %}{% endblock %}
 
 </head>
@@ -38,7 +38,7 @@
 
     <nav class="navbar navbar-expand-md bg-white fixed-top blog-navbar py-md-0">
         <a class="navbar-brand d-md-none d-lg-block" id="site-logo-name" href="/">
-            <strong class="px-2">TendCode</strong>
+            <strong class="px-2">MyBlog</strong>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +56,7 @@
                     <a class="nav-link py-md-3 " href="/archive/"><i class="fa fa-sitemap mr-1"></i>归档</a>
                 </li>
 
-                <li class="nav-item mr-2">
+                {% comment %} <li class="nav-item mr-2">
 
                     <a class="nav-link py-md-3 " href="/tool/"><i class="fa fa-balance-scale mr-1"></i>在线工具</a>
                 </li>
@@ -65,13 +65,13 @@
                 <li class="nav-item mr-2 d-none d-lg-block">
                     <a class="nav-link py-md-3" href="https://hao.tendcode.com" target="_blank"><i
                             class="fa fa-chrome mr-1"></i>微草导航</a>
-                </li>
+                </li> {% endcomment %}
 
 
-                <li class="nav-item mr-2 ">
+                {% comment %} <li class="nav-item mr-2 ">
 
                     <a class="nav-link py-md-3 " href="/about/"><i class="fa fa-anchor mr-1"></i>关于</a>
-                </li>
+                </li> {% endcomment %}
                 <form class="nav-item navbar-form mr-2 py-md-2" role="search" method="get" id="searchform"
                     action="/search/">
                     <div class="input-group">
@@ -183,10 +183,10 @@
     <footer class="container-fluid mt-4 py-0">
         <div class="card-body text-center px-0 f-14">
             <p class="card-text mb-1">Copyright&nbsp;&copy;&nbsp;<span id="year-info"></span>
-                <a href="https://github.com/Hopetree" target="_blank"
-                    title="博客作者的Github">Hopetree</a>.&nbsp;Powered&nbsp;by&nbsp;Django.
+                <a href="https://github.com/xyw1042971947" target="_blank"
+                    title="博客作者的Github">ywixang</a>.&nbsp;Powered&nbsp;by&nbsp;Django.
             </p>
-            <p class="mb-0">
+            {% comment %} <p class="mb-0">
                 <a href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备17114114号-3</a>&nbsp;|
                 <a href="/sitemap.xml" target="_blank">Sitemap</a>
                 |&nbsp;<script type="text/javascript">
@@ -196,11 +196,11 @@
                         "s96.cnzz.com/z_stat.php%3Fid%3D1275912930' type='text/javascript'%3E%3C/script%3E"));
                 </script>
                 <span id="web-day"></span>
-            </p>
+            </p> {% endcomment %}
             <script>
                 function getnewYear() {
                     var d = new Date();
-                    var old = new Date('2018/03/28');
+                    var old = new Date('2019/12/10');
                     var x = document.getElementById("year-info");
                     x.innerHTML = d.getFullYear();
                     var y = document.getElementById("web-day");

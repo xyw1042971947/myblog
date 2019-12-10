@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'haystack',
     'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
     'comment.apps.CommentConfig',
@@ -77,6 +78,20 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 )
+
+# 全文搜索应用配置
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'blog.whoosh_cn_backend.WhooshEngine',  # 选择语言解析器为自己更换的结巴分词
+        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),  # 保存索引文件的地址，选择主目录下，这个会自动生成
+    }
+}
+# 统一分页设置
+BASE_PAGE_BY = 10
+BASE_ORPHANS = 5
+
+
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -117,11 +132,20 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'myblog',
         'HOST': 'localhost',
-        'USER': 'root',
+        'USER': 'ywxiang',
         'PASSWORD': 'Xyw@172410',
     }
 }
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379',
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+    },
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -187,3 +211,7 @@ EMAIL_HOST_PASSWORD = 'bpjhtdvzidlmbajg' # 这里是邮箱提供给的授权码�
 EMAIL_USE_TLS = True  # 保持不变
 EMAIL_FROM = '1042971947@qq.com' # 你的邮箱账号
 DEFAULT_FROM_EMAIL = '1042971947@qq.com'
+
+SITE_END_TITLE = '一个基于Github：https://github.com/Hopetree的个人博客'
+SITE_DESCRIPTION = ''
+SITE_KEYWORDS = ''
