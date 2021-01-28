@@ -206,11 +206,11 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 #邮箱设定
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = '1042971947@qq.com' # 你的邮箱账号
-EMAIL_HOST_PASSWORD = 'bpjhtdvzidlmbajg' # 这里是邮箱提供给的授权码，不是个人密码
+EMAIL_HOST_USER =  # 你的邮箱账号
+EMAIL_HOST_PASSWORD =  # 这里是邮箱提供给的授权码，不是个人密码
 EMAIL_USE_TLS = True  # 保持不变
-EMAIL_FROM = '1042971947@qq.com' # 你的邮箱账号
-DEFAULT_FROM_EMAIL = '1042971947@qq.com'
+EMAIL_FROM =  # 你的邮箱账号
+DEFAULT_FROM_EMAIL = '
 
 SITE_END_TITLE = '一个基于Github：https://github.com/Hopetree的个人博客'
 SITE_DESCRIPTION = ''
