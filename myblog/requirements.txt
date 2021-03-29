@@ -39,7 +39,7 @@ pilkit==2.0
 Pillow==4.2.1
 pipreqs==0.4.10
 pycodestyle==2.5.0
-Pygments==2.2.0
+Pygments==2.7.4
 pylint==2.4.4
 PyMySQL==0.7.11
 python3-openid==3.1.0
